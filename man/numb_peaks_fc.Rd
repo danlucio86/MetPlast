@@ -6,6 +6,9 @@
 \usage{
 numb_peaks_fc(Data)
 }
+\arguments{
+\item{Data}{a data frame the levels of different detected  metabolites/compounds -rows-, in different samples -columns-.}
+}
 \value{
 It returns a vector with the number of peaks - e.g. detected compounds - per species.
 }

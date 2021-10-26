@@ -6,6 +6,9 @@
 \usage{
 my_filter_fc(Dj_index_weight)
 }
+\arguments{
+\item{Dj_index_weight}{a data frame with all the Pij*Si values per compound for each species.}
+}
 \value{
 It returns a table
 }

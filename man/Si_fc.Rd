@@ -6,6 +6,9 @@
 \usage{
 Si_fc(x)
 }
+\arguments{
+\item{x}{is a numerical value}
+}
 \value{
 It returns a value with the Si value per metabolite (i)
 }

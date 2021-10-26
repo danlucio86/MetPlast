@@ -4,10 +4,12 @@
 \alias{MetliteSpec_pipe}
 \title{Metabolite Specialization Analysis Pipe}
 \usage{
-MetliteSpec_pipe(Data)
+MetliteSpec_pipe(Data, ...)
 }
 \arguments{
 \item{Data}{a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.}
+
+\item{...}{any other argument}
 }
 \value{
 It returns a list with 4 objects:

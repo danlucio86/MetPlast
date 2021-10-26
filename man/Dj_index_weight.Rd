@@ -21,7 +21,7 @@ Dj_index_weight calculates the contribution of METaboLITE SPECialization factor 
 Metabolite specialization factor (Pij*Si) is defined as product of the a metabolite specilization index (Si) and the frequency of the metabolite in a given sample (Pij).
 }
 \examples{
-Dj_weight_df <- Dj_index_weight (Data, Si_df)
+\dontrun{Dj_weight_df <- Dj_index_weight (Data, Si_df)}
 }
 \author{
 Lucio D'Andrea, PhD; Prof Aureliano Bombarely
