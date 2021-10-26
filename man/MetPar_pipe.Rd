@@ -4,12 +4,14 @@
 \alias{MetPar_pipe}
 \title{Metabolic Plasticity Parameters Pipe}
 \usage{
-MetPar_pipe(Stats_df, Dj_df)
+MetPar_pipe(Stats_df, Dj_df, ...)
 }
 \arguments{
 \item{Stats_df}{a data frame with statistical values for each samples, calculated from MetStats()}
 
 \item{Dj_df}{a data frame with Metabolome specialization index δj calculated from Dj_index()}
+
+\item{...}{any other argument}
 }
 \value{
 It return a list with 3 objects:

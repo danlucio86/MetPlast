@@ -4,10 +4,12 @@
 \alias{Dj_index_plot}
 \title{Metabolome (δj) Specialization Index Plot}
 \usage{
-Dj_index_plot(Dj_df)
+Dj_index_plot(Dj_df, ...)
 }
 \arguments{
 \item{Dj_df}{a data frame with the Dj values -column- for all the samples.}
+
+\item{...}{any other argument}
 }
 \value{
 It returns a dot plot
@@ -19,7 +21,7 @@ Dj_index_plot calculates METabolome SPECialization (δj) index based on Shannon 
 Metabolome (δj) Specialization Index Plot generates a graph that shows the distrubution of the Specialization index among the samples (j).
 }
 \examples{
-Dj_plot <- Dj_index_plot (Dj_df)
+ \dontrun{Dj_plot <- Dj_index_plot (Dj_df)}
 }
 \author{
 Lucio D'Andrea, PhD; Prof Aureliano Bombarely

@@ -4,10 +4,12 @@
 \alias{MetDiv_pipe}
 \title{Metabolic Diversity pipe}
 \usage{
-MetDiv_pipe(Data)
+MetDiv_pipe(Data, ...)
 }
 \arguments{
 \item{Data}{a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.}
+
+\item{...}{any other argument}
 }
 \value{
 It returns a list with 5 objects:

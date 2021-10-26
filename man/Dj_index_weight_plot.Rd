@@ -4,10 +4,12 @@
 \alias{Dj_index_weight_plot}
 \title{Metabolome Specialization index Weight plot}
 \usage{
-Dj_index_weight_plot(Dj_weight_df)
+Dj_index_weight_plot(Dj_weight_df, ...)
 }
 \arguments{
-\item{Dj_weight_df}{}
+\item{Dj_weight_df}{a data frame with the contribution of each metabolite in each sample to the metabolome specialization value}
+
+\item{...}{any other argument}
 }
 \value{
 It returns a dot plot

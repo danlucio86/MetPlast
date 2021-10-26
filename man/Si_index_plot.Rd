@@ -4,10 +4,12 @@
 \alias{Si_index_plot}
 \title{Metabolite (Si) Specialization Index Plot}
 \usage{
-Si_index_plot(Si_df)
+Si_index_plot(Si_df, ...)
 }
 \arguments{
 \item{Si_df}{a data frame with the Si values -column- for all the detected compounds - rows-, calculated from Si_index()}
+
+\item{...}{any other argument}
 }
 \value{
 It returns a dot plot

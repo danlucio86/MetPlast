@@ -7,7 +7,7 @@
 Pij_fc(Data)
 }
 \arguments{
-\item{Data}{a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.}
+\item{Data}{a data frame the levels of different detected  metabolites/compounds -rows-, in different samples -columns-.}
 }
 \value{
 It returns a dataframe with metabolite frequencies

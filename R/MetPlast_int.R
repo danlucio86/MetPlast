@@ -1,9 +1,6 @@
-
-
-
 #' Metabolite frequency per sample - Internal function
 #'
-#' @param Data a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.
+#' @param Data a data frame the levels of different detected  metabolites/compounds -rows-, in different samples -columns-.
 #'
 #' @description Internal function to calculate the frequency of metabolite i in sample j (Pij)
 #'
@@ -40,7 +37,7 @@ Pij_divided_Pi <- sweep(Pij, MARGIN = 1, Pi, FUN = "/")
 
 #' Metabolic diversity internal function
 #'
-#' @param x
+#' @param x is a numerical value
 #' @description It performs internal metabolic diversity (Hj) calculations.
 #'
 #' @details
@@ -54,7 +51,7 @@ Hj_fc <- function(x){-sum(x * log2(x), na.rm=TRUE)}
 
 #' Metabolic diversity divergence internal function
 #'
-#' @param x
+#' @param x is a numerical value
 #' @description It performs internal metabolic diversity divergence (HRj) calculations.
 #'
 #' @details
@@ -73,7 +70,7 @@ HRj_fc <- function(x){
 
 #' Metabolite Specialization internal function
 #'
-#' @param x
+#' @param x is a numerical value
 #' @description It performs internal metabolite specialization (Si) calculations.
 #'
 #' @details
@@ -88,7 +85,8 @@ Si_fc <- function(x){n_samples <- ncol(Data)
 
 #' Number of detected compounds function
 #'
-#' @param x
+#' @param Data a data frame the levels of different detected  metabolites/compounds -rows-, in different samples -columns-.
+#'
 #' @description It counts the number of detected compounds per sample
 #'
 #' @details
@@ -106,7 +104,7 @@ numb_peaks <- apply (Data_numb_peaks, MARGIN = 2, FUN = sum)}
 
 #' Metabolite contribution to metabolome specialization index (δj) function
 #'
-#' @param Dj_index_weight
+#' @param Dj_index_weight a data frame with all the Pij*Si values per compound for each species.
 #' @description It selects the metabolites that contribute the most to the metabolome specialization index (δj) - i.e. highest Pij*Si
 #'
 #' @details

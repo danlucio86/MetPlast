@@ -4,7 +4,7 @@
 \alias{MetPar_plot}
 \title{Metabolic Plasticity Parameters Plot}
 \usage{
-MetPar_plot(MetPar_df, x_element, ref_line = FALSE)
+MetPar_plot(MetPar_df, x_element, ref_line = FALSE, ...)
 }
 \arguments{
 \item{MetPar_df}{a data frame with all the metabolic plasticity paramenters obtained by MetPar_df ()}
@@ -12,6 +12,8 @@ MetPar_plot(MetPar_df, x_element, ref_line = FALSE)
 \item{x_element}{column names from MetPar_df: "Divj", "Sample", or "Hj"}
 
 \item{ref_line}{a logical argument. If TRUE, draws a x=y line. DEFAULT= FALSE}
+
+\item{...}{any other argument}
 }
 \value{
 It returns a dot plot

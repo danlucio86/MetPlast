@@ -1,6 +1,7 @@
 #' Metabolic Diversity pipe
 #'
 #' @param Data a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.
+#' @param ... any other argument
 #'
 #' @description MetDiv_pipe calculates and summarises all the calculation and plots related with Metabolic Diversity.
 #'
@@ -16,11 +17,13 @@
 #' 4. A dot plot despicting the dependency beween the number of peaks and Species;
 #' 5. A grid with all the plots
 #'
+#'
+#'
 #' @export
 #'
 #' @examples MetDiv_pipe <- MetDiv_pipe (Data)
 
-MetDiv_pipe <- function(Data){
+MetDiv_pipe <- function(Data, ...){
   #Mssg
   print("This function calculates Shannon entropy as a direct measure of Metabolic Diversity")
 
@@ -82,7 +85,7 @@ MetDiv_pipe <- function(Data){
 #' Metabolite (Si) and Metabolome (δj) Specialization Index Pipe
 #'
 #' @param Data a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.
-#'
+#' @param ... any other argument
 #' @description MetSpec_pipe calculates METabolite SPECialization (Si) and METabolome SPECialization (δj) indexes based on Shannon entropy.
 #'
 #' @details
@@ -98,11 +101,12 @@ MetDiv_pipe <- function(Data){
 #' 3. A dot plot depicting the Si value of each compound
 #' 4. A dot plot depicting the δj per species
 #'
+#'
 #' @export
 #'
 #' @examples Dj <- MetSpec_pipe (Data)
 
-MetSpec_pipe <- function (Data){
+MetSpec_pipe <- function (Data, ...){
   # Mssg
   print("THIS PARAMETER CAN NOT BE EXTRAPOLATED TO OTHER DATA SETS")
 
@@ -170,6 +174,7 @@ MetSpec_pipe <- function (Data){
 #' Metabolite Specialization Analysis Pipe
 #'
 #' @param Data a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.
+#' @param ... any other argument
 #'
 #' @description MetliteSpec_pipe calculates the contribution of Metabolite Specialization factor (Pij*Si) to the Metabolome Specialization (δj) index.
 #'
@@ -185,12 +190,13 @@ MetSpec_pipe <- function (Data){
 #' 3. A dot plot depicting the Pij*Si value of each species
 #' 4. A dot plot depicting the highest Pij*Si value per species
 #'
+#'
 #' @export
 #'
 #' @examples MetliteSpec_pipe <- MetliteSpec_pipe (Data)
 
 
-MetliteSpec_pipe <- function (Data){
+MetliteSpec_pipe <- function (Data, ...){
 
   # Mssg
   print("THIS PARAMETER CAN NOT BE EXTRAPOLATED TO OTHER DATA SETS ")
@@ -255,6 +261,7 @@ MetliteSpec_pipe <- function (Data){
 #'
 #' @param Stats_df a data frame with statistical values for each samples, calculated from MetStats()
 #' @param Dj_df  a data frame with Metabolome specialization index δj calculated from Dj_index()
+#' @param ... any other argument
 #'
 #' @description MetPar_pipe integrates Hj, δj, numb_peaks, HRj, and Divj parameters, as well as graphically evaluate the relationship between some of them.
 #'
@@ -268,12 +275,13 @@ MetliteSpec_pipe <- function (Data){
 #' 2. A dot plot depicting the relationship between the Hj and δj values of each sample
 #' 3. A dot plot depicting the relationship between Divj and δj values of each sample
 #'
+#'
 #' @export
 #'
 #' @examples
 #' MetPar <- MetPar_pipe (Stats_df, Dj_df)
 
-MetPar_pipe<- function(Stats_df, Dj_df){
+MetPar_pipe<- function(Stats_df, Dj_df, ...){
 
   #Message
   print("Well, it looks you got everything you wanted. Enjoy :)")

@@ -77,7 +77,7 @@ MetStats <- function(Data, MetDiv_df) {
 #'
 #' @export
 #'
-#' @examples Dj_weight_df <- Dj_index_weight (Data, Si_df)
+#' @examples \dontrun{Dj_weight_df <- Dj_index_weight (Data, Si_df)}
 
 
 Dj_index_weight <- function (Data, Si_df){
@@ -125,7 +125,8 @@ Dj_index_weight <- function (Data, Si_df){
 
 #' Metabolome Specialization index Weight plot
 #'
-#' @param Dj_weight_df
+#' @param Dj_weight_df a data frame with the contribution of each metabolite in each sample to the metabolome specialization value
+#' @param ... any other argument
 #'
 #' @description Dj_index_weight plots the contribution of metabolite specialization factor (Pij*Si) to the Metabolome Specialization (Dj) index.
 #'
@@ -136,12 +137,13 @@ Dj_index_weight <- function (Data, Si_df){
 #'
 #' @return It returns a dot plot
 #'
+#'
 #' @export
 #'
 #' @examples Dj_weight_plot <- Dj_index_weight_plot (Dj_weight_df)
 
 
-Dj_index_weight_plot <- function(Dj_weight_df){
+Dj_index_weight_plot <- function(Dj_weight_df, ...){
 
   #Warnings
   if (is.data.frame(Dj_weight_df) == FALSE) {
@@ -209,6 +211,7 @@ MetPar_df <- function(Stats_df, Dj_df){
 #' @param MetPar_df a data frame with all the metabolic plasticity paramenters obtained by MetPar_df ()
 #' @param x_element column names from MetPar_df: "Divj", "Sample", or "Hj"
 #' @param ref_line a logical argument. If TRUE, draws a x=y line. DEFAULT= FALSE
+#' @param ... any other argument
 #'
 #' @description MetPar allows to graphically evaluate the relationship between Hj, δj, numb_peaks, HRj, and Divj parameters
 #'
@@ -219,13 +222,14 @@ MetPar_df <- function(Stats_df, Dj_df){
 #'
 #' @return It returns a dot plot
 #'
+#'
 #' @export
 #'
 #' @examples
 #' MetPar_plot <- MetPar_plot (MetPar_df, Divj, ref_line = "TRUE")
 
 
-MetPar_plot <- function (MetPar_df, x_element, ref_line = FALSE) {
+MetPar_plot <- function (MetPar_df, x_element, ref_line = FALSE, ...) {
   #mssg
   if(ref_line != TRUE) {
     print("DEFAULT, ref_line=FALSE. Please, for x=y reference line, select = TRUE")
