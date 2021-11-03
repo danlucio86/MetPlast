@@ -118,5 +118,5 @@ numb_peaks <- apply (Data_numb_peaks, MARGIN = 2, FUN = sum)}
 my_filter_fc <- function(Dj_index_weight) {
   Dj_index_weight %>%
     group_by(Sample) %>%
-    dplyr::filter(Pij_Si == max (Pij_Si))
+    tydiverse::filter(.,Pij_Si == max (Pij_Si))
 }
