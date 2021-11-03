@@ -115,8 +115,8 @@ numb_peaks <- apply (Data_numb_peaks, MARGIN = 2, FUN = sum)}
 #' @return It returns a table
 
 
-my_filter_fc <- function(df) {
-  df %>%
+my_filter_fc <- function(data) {
+   data %>%
     dplyr::group_by(Sample) %>%
-    dplyr::filter(Pij_Si == max({{Pij_Si}}))
+    dplyr::filter(Pij_Si == max(Pij_Si))
 }
