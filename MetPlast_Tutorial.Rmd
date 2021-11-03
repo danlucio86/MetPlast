@@ -73,21 +73,6 @@ library(rmarkdown)
 paged_table(head(Data))
 ```
 
-## Initial statistical analysis 
-
-### Testing normal distribution
-
-Before proceeding with the analysis of the metabolic data, we  recommend to test if each sample is normally distributed.
-
-For example, here we performs Shapiro-Wilk to test whether the samples are normally distributed. Considering an alpha value of 1 %, then if the Shapiro value is lower than 0.01 the null hypothesis is not reject and we can assume normal distribution.  
-
-```{r}
-normality <- normality(Data)
-
-#Based on these results we can conclude that all our samples have normal distribution (value >0.01). Moreover, most of them show a value greater than 0.05 providing higher robustness to the analysis.
-
-```
-
 
 # Metabolic Parameters
 
