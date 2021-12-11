@@ -2,7 +2,7 @@
 % Please edit documentation in R/MetPlast_pipe.R
 \name{MetDiv_pipe}
 \alias{MetDiv_pipe}
-\title{Metabolic Diversity pipe}
+\title{Metabolic Diversity Pipeline}
 \usage{
 MetDiv_pipe(Data, ...)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/MetPlast_pipe.R
 \name{MetSpec_pipe}
 \alias{MetSpec_pipe}
-\title{Metabolite (Si) and Metabolome (δj) Specialization Index Pipe}
+\title{Metabolite (Si) and Metabolome (δj) Specialization Index Pipeline}
 \usage{
 MetSpec_pipe(Data, ...)
 }

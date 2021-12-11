@@ -1,4 +1,4 @@
-#' Metabolic Diversity pipe
+#' Metabolic Diversity Pipeline
 #'
 #' @param Data a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.
 #' @param ... any other argument
@@ -82,7 +82,7 @@ MetDiv_pipe <- function(Data, ...){
 }
 
 
-#' Metabolite (Si) and Metabolome (δj) Specialization Index Pipe
+#' Metabolite (Si) and Metabolome (δj) Specialization Index Pipeline
 #'
 #' @param Data a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.
 #' @param ... any other argument
@@ -171,7 +171,7 @@ MetSpec_pipe <- function (Data, ...){
 }
 
 
-#' Metabolite Specialization Analysis Pipe
+#' Metabolite Specialization Analysis Pipeline
 #'
 #' @param Data a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.
 #' @param ... any other argument
@@ -257,7 +257,7 @@ MetliteSpec_pipe <- function (Data, ...){
   print (list)
 }
 
-#' Metabolic Plasticity Parameters Pipe
+#' Metabolic Plasticity Parameters Pipeline
 #'
 #' @param Stats_df a data frame with statistical values for each samples, calculated from MetStats()
 #' @param Dj_df  a data frame with Metabolome specialization index δj calculated from Dj_index()

@@ -2,7 +2,7 @@
 % Please edit documentation in R/MetPlast_pipe.R
 \name{MetliteSpec_pipe}
 \alias{MetliteSpec_pipe}
-\title{Metabolite Specialization Analysis Pipe}
+\title{Metabolite Specialization Analysis Pipeline}
 \usage{
 MetliteSpec_pipe(Data, ...)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/MetPlast_pipe.R
 \name{MetPar_pipe}
 \alias{MetPar_pipe}
-\title{Metabolic Plasticity Parameters Pipe}
+\title{Metabolic Plasticity Parameters Pipeline}
 \usage{
 MetPar_pipe(Stats_df, Dj_df, ...)
 }
