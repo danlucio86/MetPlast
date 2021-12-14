@@ -4,10 +4,12 @@
 \alias{MetDiv_pipe}
 \title{Metabolic Diversity Pipeline}
 \usage{
-MetDiv_pipe(Data, ...)
+MetDiv_pipe(Data, Data_raw, ...)
 }
 \arguments{
 \item{Data}{a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.}
+
+\item{Data_raw}{a data frame with the levels of the detected metabolites without replacing NAs values}
 
 \item{...}{any other argument}
 }
@@ -27,7 +29,7 @@ MetDiv_pipe pipes the functions MetDiv(), MetDiv_plot(), and MetDiv_Supp_plot().
 All the outputs can be easily unlisted, and extracted, and plotted.
 }
 \examples{
-MetDiv_pipe <- MetDiv_pipe (Data)
+MetDiv_pipe <- MetDiv_pipe (Data, Data_raw)
 }
 \author{
 Lucio D'Andrea, PhD; Prof Aureliano Bombarely

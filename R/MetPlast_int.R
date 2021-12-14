@@ -85,22 +85,19 @@ Si_fc <- function(x){n_samples <- ncol(Data)
 
 #' Number of detected compounds function
 #'
-#' @param Data a data frame the levels of different detected  metabolites/compounds -rows-, in different samples -columns-.
+#' @param Data_raw a data frame the levels of different detected  metabolites/compounds -rows-, in different samples -columns-, without replacing the NAs.
 #'
 #' @description It counts the number of detected compounds per sample
 #'
 #' @details
-#' It counts the number of compound per sample that have a value higher to the mininum.
-#' Initially, NA values are replaced by the minimum value of the whole data set divided by 1000000.
-#' Thus, the function considers the minimum value of the corrected data set as a NA in the original data set (i.e. absence of the compound)
+#' The function identified and excludes the NAs on each col, to count the total number of compounds truely identified in each sample
 #'
 #' @author Lucio D'Andrea, PhD; Prof Aureliano Bombarely
 #'
 #' @return It returns a vector with the number of peaks - e.g. detected compounds - per species.
 
-numb_peaks_fc <- function(Data) {min_data <- min(Data)
-Data_numb_peaks <- apply(Data, MARGIN = 2, FUN = function(x){x != min_data})
-numb_peaks <- apply (Data_numb_peaks, MARGIN = 2, FUN = sum)}
+numb_peaks_fc <- function(Data_raw) {
+  Data_numb_peaks <- apply(Data_raw, 2, function(x) length(which(!is.na(x))))}
 
 #' Metabolite contribution to metabolome specialization index (δj) function
 #'

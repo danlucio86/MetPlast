@@ -1,6 +1,7 @@
 #' Metabolic Diversity Index
 #'
-#' @param Data a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.
+#' @param Data a data frame the levels of the detected  metabolites/compounds -rows-, in different samples -columns-.
+#' @param Data_raw a data frame with the levels of the detected metabolites without replacing NAs values
 #'
 #' @description MetDiv calculates METabolic Diversity (Hj) index based on Shannon entropy.
 #'
@@ -15,9 +16,9 @@
 #' @importFrom methods hasArg
 #' @importFrom stats filter
 #'
-#' @examples Hj <- MetDiv (Data)
+#' @examples Hj <- MetDiv (Data, Data_raw)
 
-MetDiv <- function(Data){
+MetDiv <- function(Data, Data_raw){
   #Mssg
   print("This function calculates Shannon entropy as a direct measure of Metabolic Diversity")
 
@@ -47,7 +48,7 @@ MetDiv <- function(Data){
   Hj <- apply(Pij, MARGIN = 2, FUN = Hj_fc )
 
   # Number of peaks
-  numb_peaks <- numb_peaks_fc (Data)
+  numb_peaks <- numb_peaks_fc (Data_raw)
 
   # Output generation
   Hj <- cbind (Hj, numb_peaks)

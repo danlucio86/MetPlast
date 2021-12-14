@@ -1,6 +1,7 @@
 #' Metabolic Diversity Pipeline
 #'
 #' @param Data a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.
+#' @param Data_raw a data frame with the levels of the detected metabolites without replacing NAs values
 #' @param ... any other argument
 #'
 #' @description MetDiv_pipe calculates and summarises all the calculation and plots related with Metabolic Diversity.
@@ -18,12 +19,11 @@
 #' 5. A grid with all the plots
 #'
 #'
-#'
 #' @export
 #'
-#' @examples MetDiv_pipe <- MetDiv_pipe (Data)
+#' @examples MetDiv_pipe <- MetDiv_pipe (Data, Data_raw)
 
-MetDiv_pipe <- function(Data, ...){
+MetDiv_pipe <- function(Data, Data_raw, ...){
   #Mssg
   print("This function calculates Shannon entropy as a direct measure of Metabolic Diversity")
 
@@ -58,7 +58,7 @@ MetDiv_pipe <- function(Data, ...){
   Hj <- apply(Pij, MARGIN = 2, FUN = Hj_fc )
 
   # Number of peaks
-  numb_peaks <- numb_peaks_fc (Data)
+  numb_peaks <- numb_peaks_fc (Data_raw)
 
   # Output generation
   Hj <- cbind (Hj, numb_peaks)

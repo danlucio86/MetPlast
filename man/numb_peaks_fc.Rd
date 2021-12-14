@@ -4,10 +4,10 @@
 \alias{numb_peaks_fc}
 \title{Number of detected compounds function}
 \usage{
-numb_peaks_fc(Data)
+numb_peaks_fc(Data_raw)
 }
 \arguments{
-\item{Data}{a data frame the levels of different detected  metabolites/compounds -rows-, in different samples -columns-.}
+\item{Data_raw}{a data frame the levels of different detected  metabolites/compounds -rows-, in different samples -columns-, without replacing the NAs.}
 }
 \value{
 It returns a vector with the number of peaks - e.g. detected compounds - per species.
@@ -16,9 +16,7 @@ It returns a vector with the number of peaks - e.g. detected compounds - per spe
 It counts the number of detected compounds per sample
 }
 \details{
-It counts the number of compound per sample that have a value higher to the mininum.
-Initially, NA values are replaced by the minimum value of the whole data set divided by 1000000.
-Thus, the function considers the minimum value of the corrected data set as a NA in the original data set (i.e. absence of the compound)
+The function identified and excludes the NAs on each col, to count the total number of compounds truely identified in each sample
 }
 \author{
 Lucio D'Andrea, PhD; Prof Aureliano Bombarely

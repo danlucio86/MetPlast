@@ -1,12 +1,13 @@
-\name{Data}
-\alias{Data}
+\name{Data_raw}
+\alias{Data_raw}
 \docType{data}
-\title{Metabolome changes during tomato domestication
+\title{
+Metabolome changes during tomato domestication
 }
 \description{
-Compounds detected and quantified by LC-MS/MS in different tomato and tomato-related species. NAs values are replaced by minimum value detected in the whole data set, divided 1.106 times
+Compounds detected and quantified by LC-MS/MS in different tomato and tomato-related species. NAs values are not replaced.
 }
-\usage{data("Data")}
+\usage{data("Data_raw")}
 \format{
   A data frame with 980 observations on the following 402 variables.
   \describe{

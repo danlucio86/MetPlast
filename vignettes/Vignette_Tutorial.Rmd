@@ -9,7 +9,6 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -53,9 +52,10 @@ This package has several external dependencies that are automatically uploaded w
 
 This package takes as a data set a data frame containing the standardized quantity of different metabolites - measured as peak's intensity- in a given set of samples. It needs to be tidy in order to have the first column the "Compounds", and all the samples as columns. It is important to named the first column as "Compounds".
 
-A data set extract from Zhug et al 2018 can be easily uploaded from the folder Data/Data.rda. 
+A data sets, with replaced or non-replaced NAs, extract from Zhug et al 2018 can be easily uploaded from the folder Data/Data.rda. 
 
 ```{r}
+Data_raw <- MetPlast::Data_raw
 Data <- MetPlast::Data
 ```
 
@@ -65,10 +65,10 @@ This data set contains the metabolic profile of  red-fruited tomato populations 
 When the user desires to upload its own data set, it can be use the following commands: 
 
 ```{r, echo=TRUE}
-##Data <- read.csv2(file = "Test.csv", header = TRUE, row.names = "Compounds")
+##Data_raw <- read.csv2(file = "Test.csv", header = TRUE, row.names = "Compounds")
 
 library(rmarkdown)
-paged_table(head(Data))
+paged_table(head(Data_raw))
 
 ```
 
@@ -79,6 +79,7 @@ When comparing the set of metabolites from different samples, it is pretty usual
 In case a new data set is used, the following command can be use:
 
 ```{r}
+Data <- Data_raw
 Data[is.na(Data)] <- (min(Data, na.rm=TRUE))/1000000
 
 library(rmarkdown)
@@ -104,7 +105,7 @@ MetPlast is structured in four set of functions:
 MetDiv() calculates METabolic Diversity (Hj) index based on Shannon entropy. The metabolic profile diversity is defined as the Shannon entropy using metabolite frequency distribution in a sample (Hj). Hj can take any value between zero when only one metabolite is detected up to log2(m), where all m metabolites are detected and accumulates at the same frequency: 1/m.
 
 ```{r, results='hide'}
-MetDiv_df <- MetDiv (Data)
+MetDiv_df <- MetDiv (Data, Data_raw)
 
 ```
 
@@ -330,7 +331,7 @@ A scatter plot showing Metabolome Specialization (Dj) vs Divergence (Divj). This
 Pipe functions integrate the individual functions previously exposed in this tutorial. Here, we are going to show how to use them, but for the sake of simplicity the results obtained from them are not going to be printed.
 
 ```{r, results='hide', fig.show='hide'}
-MetDiv <- MetDiv_pipe(Data = Data)
+MetDiv <- MetDiv_pipe(Data = Data, Data_raw = Data_raw)
 ```
 
 ```{r, results='hide', fig.show='hide'}

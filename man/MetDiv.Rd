@@ -4,10 +4,12 @@
 \alias{MetDiv}
 \title{Metabolic Diversity Index}
 \usage{
-MetDiv(Data)
+MetDiv(Data, Data_raw)
 }
 \arguments{
-\item{Data}{a data frame the levels of differente detected  metabolites/compounds -rows-, in different samples -columns-.}
+\item{Data}{a data frame the levels of the detected  metabolites/compounds -rows-, in different samples -columns-.}
+
+\item{Data_raw}{a data frame with the levels of the detected metabolites without replacing NAs values}
 }
 \value{
 A data frame with the Hj value and number of peaks (compounds) per species
@@ -19,7 +21,7 @@ MetDiv calculates METabolic Diversity (Hj) index based on Shannon entropy.
 The metabolic profile diversity is defined as the Shannon entropy using metabolite frequency distribution in a sample (j) -Hj index-. Hj can take any value between zero when only one metabolite is detected up to log2(m), where all m metabolites are detected and accumulates at the same frequency: 1/m.
 }
 \examples{
-Hj <- MetDiv (Data)
+Hj <- MetDiv (Data, Data_raw)
 }
 \author{
 Lucio D'Andrea, PhD; Prof Aureliano Bombarely
